@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="616.0" prefWidth="673.0" style="-fx-background-color: #D6E3F2;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sorochuk.MailSendlerController">
+   <children>
+      <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="37.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/E:/JavaProjects/CourseProject/Main/resourses/images/mail.png" />
+         </image></ImageView>
+      <Label layoutX="147.0" layoutY="50.0" text="SL-Mailer V1.0" textFill="#0f5dca">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
+      <Label layoutX="147.0" layoutY="86.0" text="©Все права защищены" textFill="#0f5dca">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="26.0" layoutY="172.0" text="Получатель" textFill="#0f5dca">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="recipientField" layoutX="154.0" layoutY="175.0" prefHeight="25.0" prefWidth="341.0" />
+      <TextField fx:id="themeField" layoutX="154.0" layoutY="218.0" prefHeight="25.0" prefWidth="341.0" />
+      <Label layoutX="27.0" layoutY="215.0" text="Тема письма" textFill="#0f5dca">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="252.0" text="Тело письма" textFill="#0f5dca">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="bodyMailField" layoutX="154.0" layoutY="259.0" prefHeight="162.0" prefWidth="502.0" />
+      <Label layoutX="26.0" layoutY="438.0" text="Отправитель" textFill="#0f5dca">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sendlerField" layoutX="154.0" layoutY="441.0" prefHeight="25.0" prefWidth="502.0" />
+      <PasswordField fx:id="passField" layoutX="154.0" layoutY="486.0" prefHeight="25.0" prefWidth="502.0" />
+      <Label layoutX="26.0" layoutY="483.0" text="Пароль" textFill="#0f5dca">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="31.0" layoutY="531.0" mnemonicParsing="false" onAction="#BtnSend" prefHeight="46.0" prefWidth="277.0" text="Отправить">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/E:/JavaProjects/CourseProject/Main/resourses/images/buttonMailSend.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="505.0" layoutY="210.0" mnemonicParsing="false" onAction="#loadEmails" prefHeight="40.0" prefWidth="150.0" text="Загрузить">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/E:/JavaProjects/CourseProject/Main/resourses/images/open-folder.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="378.0" layoutY="531.0" mnemonicParsing="false" onAction="#changeForm" prefHeight="46.0" prefWidth="277.0" text="Парсер">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/E:/JavaProjects/CourseProject/Main/resourses/images/logoImage.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ComboBox fx:id="cb_parse" layoutX="505.0" layoutY="175.0" prefWidth="150.0" promptText="Выберите..." />
+   </children>
+</AnchorPane>
